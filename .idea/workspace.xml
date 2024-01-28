@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ytdlp/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/YtdlpApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/controllers/VideoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/controllers/requests/VideoRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/models/Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/services/VideoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ytdlp/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="create video request endpoint">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/repositories/VideoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/life/macchiato/fishsticks/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/controllers/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/controllers/VideoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/models/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/models/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/services/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/services/VideoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +24,7 @@
       <list>
         <option value="Class" />
         <option value="Record" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -57,7 +55,7 @@
       <recent name="life.macchiato.fishsticks.controllers.requests" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.YtdlpApplication">
     <configuration name="YtdlpApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="life.macchiato.fishsticks.YtdlpApplication" />
       <module name="ytdlp" />
@@ -71,9 +69,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.YtdlpApplication" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -86,6 +97,18 @@
       <option name="presentableId" value="Default" />
       <updated>1706416371474</updated>
     </task>
+    <task id="LOCAL-00001" summary="create video request endpoint">
+      <created>1706419266058</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706419266058</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create video request endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="create video request endpoint" />
   </component>
 </project>

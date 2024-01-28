@@ -3,15 +3,15 @@ server:
 
 spring:
   application:
-    name: ytdl
-#  datasource:
-#    password: password
-#    username: dcat
-#    url: jdbc:postgres://localhost:5432/ytdl
-#  jpa:
-#    properties:
-#      hibernate:
-#        format_sql: true
-#    hibernate:
-#      ddl-auto: create-drop
-#    show-sql: true
+    name: ytdlp
+  datasource:
+    password: password
+    username: dcat
+    url: jdbc:postgresql://localhost:5432/ytdlp
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true

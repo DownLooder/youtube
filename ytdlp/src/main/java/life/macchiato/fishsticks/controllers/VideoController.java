@@ -2,6 +2,7 @@ package life.macchiato.fishsticks.controllers;
 
 import com.jfposton.ytdlp.YtDlpException;
 import life.macchiato.fishsticks.controllers.requests.VideoRequest;
+import life.macchiato.fishsticks.models.Video;
 import life.macchiato.fishsticks.services.VideoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -18,8 +19,8 @@ public record VideoController(VideoService videoService) {
     }
 
     @PostMapping
-    public void requestVideo(@RequestBody VideoRequest videoRequest) {
+    public ResponseEntity<Video> requestVideo(@RequestBody VideoRequest videoRequest) {
         log.info("new video request {}", videoRequest);
-        videoService.requestVideo(videoRequest);
+        return ResponseEntity.status(201).body(videoService.requestVideo(videoRequest));
     }
 }
