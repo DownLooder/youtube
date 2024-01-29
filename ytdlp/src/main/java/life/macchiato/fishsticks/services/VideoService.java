@@ -6,10 +6,15 @@ import com.jfposton.ytdlp.mapper.VideoInfo;
 import life.macchiato.fishsticks.controllers.requests.VideoRequest;
 import life.macchiato.fishsticks.models.Video;
 import life.macchiato.fishsticks.repositories.VideoRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-public record VideoService(VideoRepository videoRepository) {
+@AllArgsConstructor
+public class VideoService {
+
+    private final VideoRepository videoRepository;
+
     public Video requestVideo(VideoRequest videoRequest) {
         Video video = null;
         try {

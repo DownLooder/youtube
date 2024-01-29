@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="create video request endpoint">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/repositories/VideoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/controllers/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/controllers/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/models/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/models/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/services/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/services/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="initialize postgres container and jpa" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,11 +95,26 @@
       <option name="project" value="LOCAL" />
       <updated>1706419266058</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initialize postgres container and jpa">
+      <created>1706422087593</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706422087593</updated>
+    </task>
+    <task id="LOCAL-00003" summary="initialize postgres container and jpa">
+      <created>1706422101475</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706422101475</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create video request endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="create video request endpoint" />
+    <MESSAGE value="initialize postgres container and jpa" />
+    <option name="LAST_COMMIT_MESSAGE" value="initialize postgres container and jpa" />
   </component>
 </project>

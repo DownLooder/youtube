@@ -13,6 +13,7 @@
     <url>fs.macchiato.life</url>
     <modules>
         <module>ytdlp</module>
+        <module>youtube</module>
     </modules>
 
     <parent>
@@ -25,6 +26,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-cloud.version>2023.0.0</spring-cloud.version>
     </properties>
 
 
@@ -34,6 +36,13 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
                 <scope>import</scope>
             </dependency>
         </dependencies>
