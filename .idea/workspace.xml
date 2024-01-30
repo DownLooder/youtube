@@ -4,26 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="initialize youtube module">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/java/life/macchiato/fishsticks/eurekaserver/EurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/youtube/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="initialize eureka clients">
+      <change afterPath="$PROJECT_DIR$/youtube/src/main/resources/banner.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/fishsticks/youtube/controllers/YoutubeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/fishsticks/youtube/controllers/YoutubeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/fishsticks/youtube/controllers/requests/SearchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/fishsticks/youtube/controllers/requests/SearchRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/fishsticks/youtube/models/SearchResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/fishsticks/youtube/models/SearchResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/fishsticks/youtube/services/YoutubeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/fishsticks/youtube/services/YoutubeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/YtdlpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/ytdlp/YtdlpApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/controllers/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/ytdlp/controllers/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/controllers/requests/VideoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/ytdlp/controllers/requests/VideoRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/models/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/ytdlp/models/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/repositories/VideoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/ytdlp/repositories/VideoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/services/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/ytdlp/services/VideoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youtube/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ytdlp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +58,7 @@
       <recent name="life.macchiato.fishsticks.controllers.requests" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.YoutubeApplication">
+  <component name="RunManager" selected="Application.YtdlpApplication">
     <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="life.macchiato.fishsticks.eurekaserver.EurekaServerApplication" />
       <module name="eureka-server" />
@@ -130,9 +114,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.YoutubeApplication" />
-        <item itemvalue="Application.EurekaServerApplication" />
         <item itemvalue="Application.YtdlpApplication" />
+        <item itemvalue="Application.EurekaServerApplication" />
+        <item itemvalue="Application.YoutubeApplication" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -174,13 +158,29 @@
       <option name="project" value="LOCAL" />
       <updated>1706544712932</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="initialize eureka server">
+      <created>1706593263183</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706593263183</updated>
+    </task>
+    <task id="LOCAL-00006" summary="initialize eureka clients">
+      <created>1706593329468</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706593329468</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create video request endpoint" />
     <MESSAGE value="initialize postgres container and jpa" />
     <MESSAGE value="initialize youtube module" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialize youtube module" />
+    <MESSAGE value="initialize eureka server" />
+    <MESSAGE value="initialize eureka clients" />
+    <option name="LAST_COMMIT_MESSAGE" value="initialize eureka clients" />
   </component>
 </project>
