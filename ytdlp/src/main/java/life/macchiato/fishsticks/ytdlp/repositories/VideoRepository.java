@@ -1,6 +1,6 @@
-package life.macchiato.fishsticks.repositories;
+package life.macchiato.fishsticks.ytdlp.repositories;
 
-import life.macchiato.fishsticks.models.Video;
+import life.macchiato.fishsticks.ytdlp.models.Video;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface VideoRepository extends JpaRepository<Video, Long>

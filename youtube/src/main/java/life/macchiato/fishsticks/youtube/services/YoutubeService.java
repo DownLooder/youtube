@@ -3,11 +3,13 @@ package life.macchiato.fishsticks.youtube.services;
 import life.macchiato.fishsticks.youtube.controllers.requests.SearchRequest;
 import life.macchiato.fishsticks.youtube.models.SearchResponse;
 import life.macchiato.fishsticks.youtube.repositories.SearchRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class YoutubeService {
 
+    @Autowired
     private SearchRepository searchRepo;
 
     public SearchResponse recentFromQuery(String query) {

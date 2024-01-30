@@ -2,17 +2,18 @@ server:
   port: 0
 spring:
   application:
-    name: ytdlp
+    name: youtube
   datasource:
     password: password
+    url: jdbc:postgresql://localhost:5432/youtube
     username: dcat
-    url: jdbc:postgresql://localhost:5432/ytdlp
   jpa:
-    properties:
-      hibernate:
-        format_sql: true
     hibernate:
       ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
     show-sql: true
 eureka:
   client:

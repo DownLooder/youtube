@@ -1,11 +1,11 @@
-package life.macchiato.fishsticks.services;
+package life.macchiato.fishsticks.ytdlp.services;
 
 import com.jfposton.ytdlp.YtDlp;
 import com.jfposton.ytdlp.YtDlpException;
 import com.jfposton.ytdlp.mapper.VideoInfo;
-import life.macchiato.fishsticks.controllers.requests.VideoRequest;
-import life.macchiato.fishsticks.models.Video;
-import life.macchiato.fishsticks.repositories.VideoRepository;
+import life.macchiato.fishsticks.ytdlp.controllers.requests.VideoRequest;
+import life.macchiato.fishsticks.ytdlp.models.Video;
+import life.macchiato.fishsticks.ytdlp.repositories.VideoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

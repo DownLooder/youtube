@@ -18,7 +18,7 @@ public class YoutubeController {
     public void searchList(@RequestBody SearchRequest searchRequest)
     {
 //        todo: find "recent" search list
-        SearchResponse recent = youtubeService.recentFromQuery(searchRequest.getQuery());
+        SearchResponse recent = youtubeService.recentFromQuery(searchRequest.query());
 
 //        todo: create new search list
         SearchResponse searchListResponse = youtubeService.searchList(searchRequest);

@@ -1,4 +1,4 @@
-package life.macchiato.fishsticks.models;
+package life.macchiato.fishsticks.ytdlp.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
