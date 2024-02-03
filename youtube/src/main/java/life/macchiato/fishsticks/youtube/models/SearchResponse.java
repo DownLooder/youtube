@@ -22,5 +22,5 @@ public class SearchResponse {
     private String previousPageToken;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_resp_id", referencedColumnName = "resp_id")
-    private List<SearchResult> results;
+    private List<VideoResult> results;
 }
