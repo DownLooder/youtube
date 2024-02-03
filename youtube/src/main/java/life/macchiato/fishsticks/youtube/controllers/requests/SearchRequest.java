@@ -1,7 +1,6 @@
 package life.macchiato.fishsticks.youtube.controllers.requests;
 
-import lombok.Getter;
-import lombok.ToString;
+import javax.annotation.Nullable;
 
-public record SearchRequest(String query, String pageToken) {
+public record SearchRequest(String query, @Nullable String pageToken) {
 }
