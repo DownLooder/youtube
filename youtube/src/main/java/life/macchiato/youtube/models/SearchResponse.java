@@ -1,4 +1,4 @@
-package life.macchiato.fishsticks.youtube.models;
+package life.macchiato.youtube.models;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,4 +1,4 @@
-package life.macchiato.fishsticks.ytdlp;
+package life.macchiato.ytdlp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

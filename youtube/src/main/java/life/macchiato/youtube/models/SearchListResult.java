@@ -1,4 +1,4 @@
-package life.macchiato.fishsticks.youtube.models;
+package life.macchiato.youtube.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -43,9 +43,8 @@ public abstract class SearchListResult {
 
         public builder() {}
 
-        //        Subclasses must override to return 'this'
         protected abstract T self();
-        abstract SearchListResult build();
+        abstract VideoResult build();
 
         public T title(String title) {
             this.title = title;

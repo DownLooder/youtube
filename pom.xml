@@ -15,6 +15,7 @@
         <module>ytdlp</module>
         <module>youtube</module>
         <module>eureka-server</module>
+        <module>common</module>
     </modules>
 
     <parent>

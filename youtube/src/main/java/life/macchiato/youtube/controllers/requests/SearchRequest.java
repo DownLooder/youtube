@@ -1,4 +1,4 @@
-package life.macchiato.fishsticks.youtube.controllers.requests;
+package life.macchiato.youtube.controllers.requests;
 
 import javax.annotation.Nullable;
 

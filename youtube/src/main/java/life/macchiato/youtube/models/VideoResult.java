@@ -1,15 +1,15 @@
-package life.macchiato.fishsticks.youtube.models;
+package life.macchiato.youtube.models;
 
-import com.google.api.services.youtube.model.SearchResult;
-import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Getter;
 import lombok.ToString;
 
 import java.util.Objects;
 
-@Data
 @Entity
+@Getter
+@ToString
 @Table(name = "VIDEO_RESULT")
 public class VideoResult extends SearchListResult {
 
@@ -44,14 +44,5 @@ public class VideoResult extends SearchListResult {
         }
     }
 
-    public static VideoResult from(SearchResult result) {
-
-        final String videoId = result.getId().getVideoId();
-        if (videoId == null) return null;
-        return new VideoResult.builder(videoId)
-                .etag(result.getEtag())
-                .title(result.getSnippet().getTitle())
-                .thumbnail(result.getSnippet().getThumbnails().getDefault().getUrl())
-                .build();
-    }
 }
+
