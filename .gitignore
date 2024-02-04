@@ -40,3 +40,5 @@ build/
 ### Google ###
 youtube/src/main/resources/client_secret.json
 tokens
+
+downloads
