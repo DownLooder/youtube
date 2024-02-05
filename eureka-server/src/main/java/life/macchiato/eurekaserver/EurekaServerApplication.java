@@ -1,4 +1,4 @@
-package life.macchiato.fishsticks.eurekaserver;
+package life.macchiato.eurekaserver;
 
 
 import org.springframework.boot.SpringApplication;
