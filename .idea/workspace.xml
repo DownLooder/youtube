@@ -4,18 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="create: commons module">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/life/macchiato/common/requests/SearchRequest.java" afterDir="false" />
+    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="add: cors for react local dev">
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/life/macchiato/common/responses/LoodResponse.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/youtube/src/main/resources/client_secret.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/controllers/VideoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/utils/Looder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/life/macchiato/common/requests/VideoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/life/macchiato/common/requests/VideoRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/fishsticks/youtube/controllers/YoutubeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/controllers/YoutubeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/fishsticks/youtube/services/YoutubeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/services/YoutubeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/ytdlp/controllers/VideoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/ytdlp/models/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/models/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/fishsticks/ytdlp/services/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/services/VideoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youtube/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/configs/EurekaClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/configs/EurekaClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/controllers/YoutubeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/controllers/YoutubeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/models/SearchResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/models/SearchResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/repositories/SearchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/repositories/SearchRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/services/YoutubeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/services/YoutubeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/controllers/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/controllers/VideoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/services/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/services/VideoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/utils/Looder.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/utils/Looder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Record" />
         <option value="Enum" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -43,34 +49,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/sandman/IdeaProjects/ScalingFishsticks/youtube/src/main/resources",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/sandman/IdeaProjects/ScalingFishsticks/common/src/main/java/life/macchiato&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sandman/IdeaProjects/ScalingFishsticks/youtube/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="life.macchiato.responses" />
       <recent name="life.macchiato.ytdlp.utils" />
       <recent name="life.macchiato.fishsticks.youtube.controllers" />
       <recent name="life.macchiato.fishsticks.youtube.repositories" />
       <recent name="life.macchiato.fishsticks.youtube.models" />
-      <recent name="life.macchiato.fishsticks.youtube.services" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/youtube/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/downloads/mp4" />
+      <recent name="$PROJECT_DIR$/downloads/m4a" />
       <recent name="$PROJECT_DIR$/tokens" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -79,11 +88,11 @@
   </component>
   <component name="RunManager" selected="Application.YtdlpApplication">
     <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="life.macchiato.fishsticks.eurekaserver.EurekaServerApplication" />
+      <option name="MAIN_CLASS_NAME" value="life.macchiato.eurekaserver.EurekaServerApplication" />
       <module name="eureka-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="life.macchiato.fishsticks.eurekaserver.*" />
+          <option name="PATTERN" value="life.macchiato.eurekaserver.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,6 +106,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="life.macchiato.youtube.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="YtdlpApplication (1)" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="life.macchiato.ytdlp.YtdlpApplication" />
+      <module name="ytdlp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="life.macchiato.ytdlp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,6 +154,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.YtdlpApplication (1)" />
       <item itemvalue="Application.YoutubeApplication" />
       <item itemvalue="Application.YtdlpApplication" />
       <item itemvalue="Application.EurekaServerApplication" />
@@ -225,7 +248,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707009889808</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="create: request video in ytdlp">
+      <created>1707025424829</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1707025424829</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add: cors for react local dev">
+      <created>1707113727536</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1707113727536</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -238,6 +275,8 @@
     <MESSAGE value="add: Google-YoutubeApi" />
     <MESSAGE value="Create: video result abstract class" />
     <MESSAGE value="create: commons module" />
-    <option name="LAST_COMMIT_MESSAGE" value="create: commons module" />
+    <MESSAGE value="create: request video in ytdlp" />
+    <MESSAGE value="add: cors for react local dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: cors for react local dev" />
   </component>
 </project>

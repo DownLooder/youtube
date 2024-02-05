@@ -1,6 +1,6 @@
 services:
   postgres:
-    container_name: scalingfishsticks_postgres
+    container_name: looder_postgres
     image: postgres
     environment:
       POSTGRES_USER: dcat
@@ -112,9 +112,6 @@ services:
 networks:
   postgres:
     driver: bridge
-#  spring:
-#    driver: bridge
-
 volumes:
   postgres:
   pgadmin:
