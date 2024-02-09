@@ -2,7 +2,8 @@ package life.macchiato.ytdlp.utils;
 
 import com.jfposton.ytdlp.*;
 import jakarta.annotation.Nullable;
-import life.macchiato.common.requests.VideoRequest;
+import life.macchiato.common.requests.DownloadRequest;
+import life.macchiato.common.responses.LoodResponse;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
@@ -21,12 +22,11 @@ public class Looder {
 
         private final YtDlpRequest request;
 
-        public builder(VideoRequest videoRequest) {
-            request = new YtDlpRequest(videoRequest.webpageUrl());
-            String outDir = outDir(videoRequest.format());
-            log.info("out dir {}", outDir);
+        public builder(DownloadRequest downloadRequest) {
+            request = new YtDlpRequest(downloadRequest.webpageUrl());
+            String outDir = outDir(downloadRequest.format());
             request.setDirectory(outDir);
-            format(videoRequest.format());
+            format(downloadRequest.format());
         }
 
         public builder stream() {
@@ -62,7 +62,7 @@ public class Looder {
         }
     }
 
-    public YtDlpResponse execute(@Nullable OutputStream outputStream)
+    public LoodResponse execute(@Nullable OutputStream outputStream)
     {
         try
         {
@@ -70,7 +70,8 @@ public class Looder {
                     request,
                     outputStream,
                     new Progress());
-            return response;
+            log.info(response.getStreamOut());
+            return new LoodResponse();
         }
         catch (YtDlpException e)
         {
@@ -79,7 +80,7 @@ public class Looder {
 
     }
 
-    public YtDlpResponse execute() {
+    public LoodResponse execute() {
         return execute(null);
     }
 
@@ -89,7 +90,13 @@ public class Looder {
 
         @Override
         public void onProgressUpdate(float progress, long eta) {
-            if (progress == 100 || (eta > 30 && progress % 10 == 0)) {
+            if (progress == 0) return;
+            if (progress == 100)
+            {
+                log.info("Download complete");
+                return;
+            }
+            if (eta > 30 && progress % 10 == 0) {
                 Instant elapsed = Instant.now().minusMillis(start.toEpochMilli());
                 log.info("Download progress: {}% elapsed: {}s eta: {}s", progress, elapsed.getEpochSecond(), eta);
             }

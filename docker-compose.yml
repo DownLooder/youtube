@@ -14,7 +14,7 @@ services:
       - postgres
     restart: unless-stopped
   pgadmin:
-    container_name: scalingfishsticks_pgadmin
+    container_name: looder_pgadmin
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}

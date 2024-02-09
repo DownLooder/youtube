@@ -1,8 +1,7 @@
 package life.macchiato.ytdlp.controllers;
 
-import com.jfposton.ytdlp.YtDlpException;
-import life.macchiato.common.requests.VideoRequest;
-import life.macchiato.ytdlp.models.Video;
+import life.macchiato.common.requests.DownloadRequest;
+import life.macchiato.common.responses.LoodResponse;
 import life.macchiato.ytdlp.services.VideoService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-@RequestMapping("api/v1/ytdlp")
+@RequestMapping("api/ytdlp")
 @AllArgsConstructor
 public class VideoController {
 
@@ -20,21 +19,22 @@ public class VideoController {
     private final VideoService videoService;
 
     @GetMapping("/version")
-    public ResponseEntity<String> getVersion() throws YtDlpException {
+    public ResponseEntity<String> getVersion() {
         return ResponseEntity.status(200)
                 .body(videoService.getVersion());
     }
 
     @PostMapping("/request")
-    public ResponseEntity<?> requestVideo(@RequestBody VideoRequest videoRequest) {
-        log.info("New video request {}", videoRequest);
-        videoService.requestVideo(videoRequest);
-        return ResponseEntity.status(201).build();
+    public ResponseEntity<?> requestVideo(@RequestBody DownloadRequest downloadRequest) {
+        log.info("New video request {}", downloadRequest);
+        LoodResponse out = videoService.requestVideo(downloadRequest);
+        log.info("{}", out);
+        return ResponseEntity.status(201).body(out);
     }
     @PostMapping("/formats")
-    public ResponseEntity<?> videoFormats(@RequestBody VideoRequest videoRequest) {
-        log.info("New formats request {}", videoRequest);
+    public ResponseEntity<?> videoFormats(@RequestBody DownloadRequest downloadRequest) {
+        log.info("New formats request {}", downloadRequest);
         return ResponseEntity.status(201)
-                .body(videoService.videoFormats(videoRequest));
+                .body(videoService.videoFormats(downloadRequest));
     }
 }

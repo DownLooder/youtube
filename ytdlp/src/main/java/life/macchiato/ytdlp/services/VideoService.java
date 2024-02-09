@@ -3,7 +3,8 @@ package life.macchiato.ytdlp.services;
 import com.jfposton.ytdlp.YtDlp;
 import com.jfposton.ytdlp.YtDlpException;
 import com.jfposton.ytdlp.mapper.VideoFormat;
-import life.macchiato.common.requests.VideoRequest;
+import life.macchiato.common.requests.DownloadRequest;
+import life.macchiato.common.responses.LoodResponse;
 import life.macchiato.ytdlp.repositories.VideoRepository;
 import life.macchiato.ytdlp.utils.Looder;
 import lombok.extern.slf4j.Slf4j;
@@ -20,23 +21,29 @@ public class VideoService {
     @Autowired
     private VideoRepository videoRepository;
 
-    public void requestVideo(VideoRequest request) {
+    public LoodResponse requestVideo(DownloadRequest request) {
 
         Looder looder = new Looder.builder(request).build();
-        looder.execute();
+        LoodResponse response = looder.execute();
 
 //        videoRepository.save(video);
+        return response;
     }
 
-    public String getVersion() throws YtDlpException {
-        return "YoutubeDLP version: ".concat(YtDlp.getVersion());
+    public String getVersion() {
+        try {
+            String version = YtDlp.getVersion();
+            return "YoutubeDLP version: ".concat(version);
+        } catch (YtDlpException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public Set<String> videoFormats(VideoRequest videoRequest) {
+    public Set<String> videoFormats(DownloadRequest downloadRequest) {
         Set<String> formats = new HashSet<>();
         try
         {
-            for (VideoFormat format : YtDlp.getFormats(videoRequest.webpageUrl())) {
+            for (VideoFormat format : YtDlp.getFormats(downloadRequest.webpageUrl())) {
                 formats.add(format.getExt());
             }
 

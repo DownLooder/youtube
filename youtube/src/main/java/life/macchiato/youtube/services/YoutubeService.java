@@ -3,40 +3,61 @@ package life.macchiato.youtube.services;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
-import life.macchiato.common.requests.SearchRequest;
+import life.macchiato.common.requests.DownloadRequest;
+import life.macchiato.common.responses.LoodResponse;
+import life.macchiato.youtube.dto.SearchRequest;
 import life.macchiato.youtube.models.SearchResponse;
 import life.macchiato.youtube.models.VideoResult;
 import life.macchiato.youtube.repositories.SearchRepository;
 import life.macchiato.youtube.utils.GoogleApiUtil;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class YoutubeService {
+
+    private static final String YTDLP_URL = "http://ytdlp/api/v1/ytdlp/";
 
     @Autowired
     private SearchRepository searchRepo;
 
-    public SearchResponse recentFromQuery(String query) {
-        return null;
-    }
+    private final RestTemplate restTemplate;
 
-    public SearchResponse searchList(SearchRequest request) throws GeneralSecurityException, IOException {
-        log.info("new video info request '{}'", request.query());
 
-        YouTube youtubeApi = GoogleApiUtil.getYoutubeService();
+    public SearchResponse searchList(SearchRequest request) {
 
-        SearchListResponse searchList = youtubeApi.search().list("snippet")
-                .setQ(request.query())
-                .setPageToken(request.pageToken())
-                .execute();
+        Optional<SearchResponse> byQuery = searchRepo.findByQuery(request.query());
+
+        if (byQuery.isPresent())
+        {
+            log.info("Found recent query");
+            return byQuery.get();
+        }
+
+        SearchListResponse searchList= null;
+        try {
+            YouTube youtubeApi = GoogleApiUtil.getYoutubeService();
+            searchList = youtubeApi.search().list("snippet")
+                    .setPageToken(request.pageToken())
+                    .setQ(request.query())
+                    .execute();
+        } catch (GeneralSecurityException | IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        if (searchList == null) return null;
 
         List<VideoResult> results = new ArrayList<>();
 
@@ -50,7 +71,7 @@ public class YoutubeService {
             }
         }
 
-        return SearchResponse.builder()
+        SearchResponse response = SearchResponse.builder()
                 .etag(searchList.getEtag())
                 .nextPageToken(searchList.getNextPageToken())
                 .previousPageToken(searchList.getPrevPageToken())
@@ -58,11 +79,12 @@ public class YoutubeService {
                 .results(results)
                 .build();
 
-    }
+        log.info("final response {}", response);
 
-    public void saveResponse(SearchResponse response) {
-    }
+        searchRepo.save(response);
+        return response;
 
+    }
     private VideoResult from(SearchResult result)
     {
         final String videoId = result.getId().getVideoId();
@@ -72,5 +94,13 @@ public class YoutubeService {
                 .title(result.getSnippet().getTitle())
                 .thumbnail(result.getSnippet().getThumbnails().getDefault().getUrl())
                 .build();
+    }
+
+    public void requestVideo(DownloadRequest downloadRequest) {
+
+        LoodResponse lood = restTemplate.postForObject(
+                YTDLP_URL + "request",
+                downloadRequest,
+                LoodResponse.class);
     }
 }

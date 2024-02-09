@@ -1,4 +1,4 @@
-package life.macchiato.youtube.controllers.requests;
+package life.macchiato.youtube.dto;
 
 import javax.annotation.Nullable;
 
