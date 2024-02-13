@@ -1,12 +1,12 @@
-package life.macchiato.ytdlp;
+package life.macchiato.download;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class YtdlpApplication {
+public class DownloadApplication {
     public static void main(String[] args) {
-        SpringApplication.run(YtdlpApplication.class, args);
+        SpringApplication.run(DownloadApplication.class, args);
     }
 
 }

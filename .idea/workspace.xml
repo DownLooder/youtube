@@ -4,23 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="refactor to looder">
+    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="use looder">
+      <change afterPath="$PROJECT_DIR$/apigw/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/common/src/main/java/life/macchiato/common/responses/LoodResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/utils/Progress.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/youtube/src/main/resources/client_secret.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/youtube/src/test/java/life/macchiato/youtube/utils/GoogleApiUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/life/macchiato/common/requests/SearchRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/life/macchiato/common/requests/VideoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/life/macchiato/common/requests/DownloadRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/configs/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/configs/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/configs/EurekaClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/life/macchiato/eurekaserver/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/life/macchiato/eurekaserver/EurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youtube/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/controllers/YoutubeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/controllers/YoutubeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/controllers/requests/SearchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/dto/SearchRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/models/SearchResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/models/SearchResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/repositories/SearchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/repositories/SearchRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/models/VideoResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/models/VideoResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/services/YoutubeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/services/YoutubeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/controllers/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/controllers/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/services/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/services/VideoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/utils/Looder.java" beforeDir="false" afterPath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/utils/Looder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/download/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/download/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/YtdlpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/DownloadApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/controllers/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/controllers/DownloadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/models/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/models/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/repositories/VideoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/repositories/DownloadRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/services/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/services/DownloadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/utils/Looder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/resources/banner.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +42,20 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="Record" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2bZIrK2k8FrIHrPWYj1HgynmHVC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -55,6 +72,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;last_directory_selection&quot;: &quot;/Users/sandman/IdeaProjects/ScalingFishsticks/common/src/main/java/life/macchiato&quot;,
@@ -81,11 +101,30 @@
       <recent name="$PROJECT_DIR$/downloads/m4a" />
       <recent name="$PROJECT_DIR$/tokens" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="life.macchiato.youtube.utils" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="life.macchiato.youtube.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.EurekaServerApplication">
+  <component name="RunManager" selected="Application.YtdlpApplication (1)">
+    <configuration name="DownloadApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="life.macchiato.download.DownloadApplication" />
+      <module name="download" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="life.macchiato.download.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="life.macchiato.eurekaserver.EurekaServerApplication" />
       <module name="eureka-server" />
@@ -113,24 +152,11 @@
       </method>
     </configuration>
     <configuration name="YtdlpApplication (1)" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="life.macchiato.ytdlp.YtdlpApplication" />
-      <module name="ytdlp" />
+      <option name="MAIN_CLASS_NAME" value="life.macchiato.download.DownloadApplication" />
+      <module name="download" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="life.macchiato.ytdlp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="YtdlpApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="life.macchiato.ytdlp.YtdlpApplication" />
-      <module name="ytdlp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="life.macchiato.ytdlp.*" />
+          <option name="PATTERN" value="life.macchiato.download.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,19 +178,34 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.YtdlpApplication (1)" />
+      <item itemvalue="Application.DownloadApplication" />
       <item itemvalue="Application.YoutubeApplication" />
-      <item itemvalue="Application.YtdlpApplication" />
       <item itemvalue="Application.EurekaServerApplication" />
+      <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.YoutubeApplication" />
-        <item itemvalue="Application.YtdlpApplication" />
         <item itemvalue="Application.EurekaServerApplication" />
+        <item itemvalue="Application.DownloadApplication" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707150905458</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="use looder">
+      <created>1707451037872</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707451037872</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -284,7 +332,8 @@
     <MESSAGE value="create: request video in ytdlp" />
     <MESSAGE value="add: cors for react local dev" />
     <MESSAGE value="refactor to looder" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor to looder" />
+    <MESSAGE value="use looder" />
+    <option name="LAST_COMMIT_MESSAGE" value="use looder" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

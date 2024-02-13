@@ -2,11 +2,11 @@ server:
   port: 0
 spring:
   application:
-    name: ytdlp
+    name: download
   datasource:
     password: password
     username: dcat
-    url: jdbc:postgresql://localhost:5432/ytdlp
+    url: jdbc:postgresql://localhost:5432/download
   jpa:
     properties:
       hibernate:
