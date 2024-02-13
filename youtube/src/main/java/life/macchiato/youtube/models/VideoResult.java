@@ -1,10 +1,14 @@
 package life.macchiato.youtube.models;
 
+import com.google.api.client.util.DateTime;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Objects;
 
 @Entity
@@ -17,6 +21,7 @@ public class VideoResult extends SearchListResult {
 
     private String videoId;
     private String webpageUrl;
+    private LocalDateTime publishDate;
 
     public VideoResult() {
     }
@@ -25,14 +30,22 @@ public class VideoResult extends SearchListResult {
         super(b);
         videoId = b.videoId;
         webpageUrl = BASE_VIDEO_URL.concat(videoId);
+        publishDate = b.publishDate;
     }
 
     public static class builder extends SearchListResult.builder<builder>{
 
         private final String videoId;
+        private LocalDateTime publishDate;
 
         public builder(String videoId) {
             this.videoId = Objects.requireNonNull(videoId);
+        }
+
+        public builder publishDate(DateTime publishedAt) {
+            Instant instant = Instant.ofEpochMilli(publishedAt.getValue());
+            publishDate = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
+            return this;
         }
 
         @Override

@@ -28,7 +28,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class YoutubeService {
 
-    private static final String YTDLP_URL = "http://ytdlp/api/v1/ytdlp/";
+    private static final String YTDLP_URL = "http://download/api/download/";
 
     @Autowired
     private SearchRepository searchRepo;
@@ -46,7 +46,7 @@ public class YoutubeService {
             return byQuery.get();
         }
 
-        SearchListResponse searchList= null;
+        SearchListResponse searchList = null;
         try {
             YouTube youtubeApi = GoogleApiUtil.getYoutubeService();
             searchList = youtubeApi.search().list("snippet")
@@ -54,7 +54,8 @@ public class YoutubeService {
                     .setQ(request.query())
                     .execute();
         } catch (GeneralSecurityException | IOException e) {
-            throw new RuntimeException(e);
+            log.info("There was an issue: {}", e.getLocalizedMessage());
+            return null;
         }
 
         if (searchList == null) return null;
@@ -92,6 +93,7 @@ public class YoutubeService {
         return new VideoResult.builder(videoId)
                 .etag(result.getEtag())
                 .title(result.getSnippet().getTitle())
+                .publishDate(result.getSnippet().getPublishedAt())
                 .thumbnail(result.getSnippet().getThumbnails().getDefault().getUrl())
                 .build();
     }

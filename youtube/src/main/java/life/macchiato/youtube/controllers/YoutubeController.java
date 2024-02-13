@@ -22,7 +22,6 @@ public class YoutubeController {
     @Autowired
     private final YoutubeService youtubeService;
 
-
     @GetMapping("/hello")
     public ResponseEntity<String> hello ()
     {
