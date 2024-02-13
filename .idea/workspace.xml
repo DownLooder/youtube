@@ -4,32 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="use looder">
+    <list default="true" id="5c17fcd9-1dec-4aae-8864-fe0c96c0fd45" name="Changes" comment="add: publish date to videoresult">
       <change afterPath="$PROJECT_DIR$/apigw/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/common/src/main/java/life/macchiato/common/responses/LoodResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/utils/Downloader.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/utils/Progress.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/youtube/src/main/resources/client_secret.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/youtube/src/test/java/life/macchiato/youtube/utils/GoogleApiUtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/life/macchiato/eurekaserver/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/life/macchiato/eurekaserver/EurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/controllers/DownloadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/controllers/DownloadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/controllers/YoutubeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/controllers/YoutubeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/models/VideoResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/models/VideoResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/services/YoutubeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/youtube/src/main/java/life/macchiato/youtube/services/YoutubeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/download/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/download/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/YtdlpApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/DownloadApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/controllers/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/controllers/DownloadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/models/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/models/Video.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/repositories/VideoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/repositories/DownloadRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/services/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/java/life/macchiato/download/services/DownloadService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ytdlp/src/main/java/life/macchiato/ytdlp/utils/Looder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ytdlp/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/download/src/main/resources/banner.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,8 +299,40 @@
       <option name="project" value="LOCAL" />
       <updated>1707451037872</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="move to DownloadApplication">
+      <created>1707797635034</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707797635034</updated>
+    </task>
+    <task id="LOCAL-00016" summary="move to DownloadApplication">
+      <created>1707797778740</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1707797778740</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add: publish date to videoresult">
+      <created>1707797850837</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1707797850837</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create video request endpoint" />
@@ -333,7 +348,9 @@
     <MESSAGE value="add: cors for react local dev" />
     <MESSAGE value="refactor to looder" />
     <MESSAGE value="use looder" />
-    <option name="LAST_COMMIT_MESSAGE" value="use looder" />
+    <MESSAGE value="move to DownloadApplication" />
+    <MESSAGE value="add: publish date to videoresult" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: publish date to videoresult" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

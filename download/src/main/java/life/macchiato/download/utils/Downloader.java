@@ -1,21 +1,23 @@
-package life.macchiato.ytdlp.utils;
+package life.macchiato.download.utils;
 
-import com.jfposton.ytdlp.*;
 import jakarta.annotation.Nullable;
 import life.macchiato.common.requests.DownloadRequest;
 import life.macchiato.common.responses.LoodResponse;
+import life.macchiato.ytdlp.YtDlp;
+import life.macchiato.ytdlp.YtDlpException;
+import life.macchiato.ytdlp.YtDlpRequest;
+import life.macchiato.ytdlp.YtDlpResponse;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.OutputStream;
-import java.time.Instant;
 
 @Slf4j
-public class Looder {
+public class Downloader {
 
     private final YtDlpRequest request;
 
-    public Looder(builder builder) {
+    public Downloader(builder builder) {
         request = builder.request;
     }
     public static class builder {
@@ -26,20 +28,10 @@ public class Looder {
             request = new YtDlpRequest(downloadRequest.webpageUrl());
             String outDir = outDir(downloadRequest.format());
             request.setDirectory(outDir);
-            format(downloadRequest.format());
         }
 
-        public builder stream() {
-            request.setOption("output", "-");
-            return this;
-        }
-        public builder format(String s) {
-            request.setOption("format", s);
-            return this;
-        }
-
-        public Looder build() {
-            return new Looder(this);
+        public Downloader build() {
+            return new Downloader(this);
         }
 
         public String outDir(String directory) {
@@ -64,13 +56,10 @@ public class Looder {
 
     public LoodResponse execute(@Nullable OutputStream outputStream)
     {
+        YtDlpResponse response = null;
         try
         {
-            YtDlpResponse response = YtDlp.execute(
-                    request,
-                    outputStream,
-                    new Progress());
-            log.info(response.getStreamOut());
+            response = YtDlp.execute(request, new Progress());
             return new LoodResponse();
         }
         catch (YtDlpException e)
@@ -82,25 +71,6 @@ public class Looder {
 
     public LoodResponse execute() {
         return execute(null);
-    }
-
-    public static class Progress implements DownloadProgressCallback {
-
-        private final Instant start = Instant.now();
-
-        @Override
-        public void onProgressUpdate(float progress, long eta) {
-            if (progress == 0) return;
-            if (progress == 100)
-            {
-                log.info("Download complete");
-                return;
-            }
-            if (eta > 30 && progress % 10 == 0) {
-                Instant elapsed = Instant.now().minusMillis(start.toEpochMilli());
-                log.info("Download progress: {}% elapsed: {}s eta: {}s", progress, elapsed.getEpochSecond(), eta);
-            }
-        }
     }
 
 
